@@ -1,1 +1,1 @@
-# green
+# automata-aws-micro
