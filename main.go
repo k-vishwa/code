@@ -1,11 +1,8 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"net/http"
-	"os"
-	"os/exec"
 )
 
 var HelloMessage string
