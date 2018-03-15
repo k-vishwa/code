@@ -10,7 +10,7 @@ var HelloMessage string
 func helloWorld(w http.ResponseWriter, r *http.Request) {
 // 	out, _ := exec.Command("bash", "-c", "hostname").Output()
 // 	HelloMessage = "#############" + string(out)
-	HelloMessage := "Hello Vishwa"
+	HelloMessage = "Hello Vishwa"
   	fmt.Fprintf(w, HelloMessage)
 }
 
@@ -20,23 +20,23 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
-type Config struct {
-	Message string `json:"message"`
-}
+// type Config struct {
+// 	Message string `json:"message"`
+// }
 
-func Configuration() {
-	file, err := os.Open("properties.json")
-	if err != nil {
-		fmt.Println("file error:", err)
-		os.Exit(1)
-	}
-	decoder := json.NewDecoder(file)
-	configuration := Config{}
+// func Configuration() {
+// 	file, err := os.Open("properties.json")
+// 	if err != nil {
+// 		fmt.Println("file error:", err)
+// 		os.Exit(1)
+// 	}
+// 	decoder := json.NewDecoder(file)
+// 	configuration := Config{}
 
-	erro := decoder.Decode(&configuration)
-	if erro != nil {
-		fmt.Println("error:", err)
-		os.Exit(1)
-	}
-	HelloMessage = configuration.Message
-}
+// 	erro := decoder.Decode(&configuration)
+// 	if erro != nil {
+// 		fmt.Println("error:", err)
+// 		os.Exit(1)
+// 	}
+// 	HelloMessage = configuration.Message
+// }
