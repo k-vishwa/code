@@ -10,33 +10,11 @@ var HelloMessage string
 func helloWorld(w http.ResponseWriter, r *http.Request) {
 // 	out, _ := exec.Command("bash", "-c", "hostname").Output()
 // 	HelloMessage = "#############" + string(out)
-	HelloMessage = "Hello Vishwa"
+	HelloMessage = "Hello World!"
   	fmt.Fprintf(w, HelloMessage)
 }
 
 func main() {
-	// Configuration()
 	http.HandleFunc("/", helloWorld)
 	http.ListenAndServe(":8081", nil)
 }
-
-// type Config struct {
-// 	Message string `json:"message"`
-// }
-
-// func Configuration() {
-// 	file, err := os.Open("properties.json")
-// 	if err != nil {
-// 		fmt.Println("file error:", err)
-// 		os.Exit(1)
-// 	}
-// 	decoder := json.NewDecoder(file)
-// 	configuration := Config{}
-
-// 	erro := decoder.Decode(&configuration)
-// 	if erro != nil {
-// 		fmt.Println("error:", err)
-// 		os.Exit(1)
-// 	}
-// 	HelloMessage = configuration.Message
-// }
