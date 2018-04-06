@@ -11,6 +11,7 @@ func helloWorld(w http.ResponseWriter, r *http.Request) {
 // 	out, _ := exec.Command("bash", "-c", "hostname").Output()
 // 	HelloMessage = "#############" + string(out)
 	HelloMessage = "Hello World-bigbang"
+	fmt.Println(HelloMessage)
   	fmt.Fprintf(w, HelloMessage)
 }
 
