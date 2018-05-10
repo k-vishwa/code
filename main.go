@@ -10,7 +10,7 @@ var HelloMessage string
 func helloWorld(w http.ResponseWriter, r *http.Request) {
 // 	out, _ := exec.Command("bash", "-c", "hostname").Output()
 // 	HelloMessage = "#############" + string(out)
-	HelloMessage = "Hello World-fail"
+	HelloMessage = "Hello World-7"
 	fmt.Println(HelloMessage)
   	fmt.Fprintf(w, HelloMessage)
 }
